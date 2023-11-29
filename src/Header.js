@@ -5,7 +5,7 @@ const Header = ({ country }) => {
 
   return (
     <div>
-      <h1>
+      <h1 className="text-2xl">
         Hello world {name} {country}
       </h1>
       <button
