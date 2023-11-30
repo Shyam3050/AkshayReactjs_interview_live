@@ -23,11 +23,17 @@ const ImageSlider = () => {
       <button className="border mr-6 bg-gray-100" onClick={prevHandler}>
         Prev
       </button>
-      <img
-        src={data[activeImgIndex]}
-        alt="wallpaper"
-        className="w-[400px] h-[200px] object-contain"
-      />
+      {data.map((img, i) => (
+        <img
+          src={img}
+          key={img}
+          alt="wallpaper"
+          className={
+            "w-[400px] h-[200px] object-contain " +
+            (activeImgIndex === i ? " block" : " hidden")
+          }
+        />
+      ))}
       <button className="border ml-6 bg-gray-100" onClick={nextHandler}>
         Next
       </button>
